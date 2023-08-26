@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="navbar bg-info">
-            <h1 class="text-white">Blade Project</h1> 
+            <h1 class="text-white">Stock project</h1> 
         </div>
     </div>
 

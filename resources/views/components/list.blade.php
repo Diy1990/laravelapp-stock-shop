@@ -10,6 +10,7 @@
             <th scope="col">Price</th>
             <th scope="col">Stock</th>
             <th scope="col">Actions</th>
+           
   </tr>
     </thead>
     <tbody>
@@ -19,7 +20,15 @@
                 <td>{{ $article->description }}</td>
                 <td>{{ $article->price }}</td>
                 <td>{{ $article->stock }}</td>
-                <td><a href="{{url('articles/'.$article->id)}}" class="btn btn-warning">Edit </a></td>
+            
+                <td><a href="{{url('articles/'.$article->id)}}" class="btn btn-warning">Edit </a>
+                
+                    <form action="{{ url('articles/'.$article->id) }}" method="POST">
+                        @csrf
+                        @method('Delete')
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
             </tr>
         @endforeach
     </tbody>

@@ -6,10 +6,12 @@
 <div class="card">
     <div class="card-header">
         Update Article
+        
     </div>
     <div class="card-body">
         <form action="{{ url('articles/'.$data->id)}}" method="POST"> 
             @csrf
+            @method('PUT')
             <label for="name" class="form-label">Name</label>
             <input type="text" id="name" name="name" class="form-control" value="{{$data->name}}" required>
       
